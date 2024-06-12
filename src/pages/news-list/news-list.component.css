@@ -1,0 +1,15 @@
+.news-list-container {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.news-item {
+  height: 50px;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+}
+
+.loading-indicator {
+  text-align: center;
+  padding: 10px;
+}

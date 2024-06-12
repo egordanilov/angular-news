@@ -1,0 +1,8 @@
+<div class="news-container">
+  <div *ngFor="let item of newsItems" class="news-item">
+    {{ item.title }} <!-- Update this line to match your news item structure -->
+  </div>
+</div>
+<div *ngIf="loading" class="loading">
+  Loading...
+</div>
