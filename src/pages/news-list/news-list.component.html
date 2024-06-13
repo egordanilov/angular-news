@@ -1,8 +1,26 @@
-<div class="news-container">
-  <div *ngFor="let item of newsItems" class="news-item">
-    {{ item.title }} <!-- Update this line to match your news item structure -->
+<section class="news-list_wrapper">
+  <h1 class="heading_1">Автомобильные новости</h1>
+  <div class="news-container">
+    <div *ngFor="let item of newsItems" class="news-item">
+      <div class="news-item-card_wrapper">
+        <div class="news-item-card_image_wrapper">
+          <img ngSrc="{{ item.titleImageUrl}}" alt="{{item.title}}" width="464" height="379" priority>
+        </div>
+        <div class="news-item-card_date text_2">
+          <span>{{ item.publishedDate | date: 'dd.MM.yyyy'}}</span>
+        </div>
+        <div class="news-item-card_title">
+          <p class="news-item-card_title_paragraph text_1">{{ item.title }}</p>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-<div *ngIf="loading" class="loading">
-  Loading...
-</div>
+  <div *ngIf="loading" class="loading">
+    Loading...
+  </div>
+</section>
+
+
+item.titleImageUrl
+item.url
+item.fullUrl

@@ -1,12 +1,12 @@
 import {Component, HostListener} from '@angular/core';
 import {NewsService} from "../../services/news.service";
-import {CommonModule} from "@angular/common";
+import {CommonModule, NgOptimizedImage} from "@angular/common";
 
 
 @Component({
   selector: 'app-news-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NgOptimizedImage],
   templateUrl: './news-list.component.html',
   styleUrl: './news-list.component.css'
 })
@@ -39,7 +39,8 @@ export class NewsListComponent {
     const pos = (document.documentElement.scrollTop || document.body.scrollTop) + window.innerHeight;
     const max = document.documentElement.scrollHeight;
 
-    if (pos >= max) {
+    //max value divided by two to avoid loading delays when reached bottom of the page
+    if (pos >= max/2) {
       this.loadMore();
     }
   }
