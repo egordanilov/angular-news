@@ -1,12 +1,13 @@
 import {Component, HostListener} from '@angular/core';
 import {NewsService} from "../../services/news.service";
 import {CommonModule, NgOptimizedImage} from "@angular/common";
+import {NewsListItemComponent} from "../../shared/news-list-item/news-list-item.component";
 
 
 @Component({
   selector: 'app-news-list',
   standalone: true,
-  imports: [CommonModule, NgOptimizedImage],
+  imports: [CommonModule, NgOptimizedImage, NewsListItemComponent],
   templateUrl: './news-list.component.html',
   styleUrl: './news-list.component.css'
 })
