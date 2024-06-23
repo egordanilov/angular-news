@@ -13,4 +13,13 @@ import {ModalComponent} from "../shared/modal/modal.component";
 })
 export class AppComponent {
   title = 'autonews';
+  modalIsOpen = true;
+  closeModal() {
+    this.modalIsOpen = false;
+    console.log(this.modalIsOpen);
+  }
+  openModal() {
+    this.modalIsOpen = true;
+    console.log(this.modalIsOpen);
+  }
 }
